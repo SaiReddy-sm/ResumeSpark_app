@@ -1,0 +1,171 @@
+/* Figma-Style Portrait Virtual Page Canvas (Standard A4 Dimensions) */
+.virtual-sheet {
+  width: 210mm;
+  height: 297mm;
+  background-color: #ffffff;
+  padding: 16mm 18mm;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 16px -6px rgba(15, 23, 42, 0.04);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: top center;
+  border: 1px solid #e2e8f0;
+}
+
+/* Page Indicator Title Badge */
+.page-sheet-label {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #475569;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* Multi-Page Sheet Layout Stack */
+.page-break-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* ==============================================
+   CSS DYNAMIC AVATARS FALLBACK
+   ============================================== */
+.css-avatar-placeholder {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #475569;
+  border: 2px solid #cbd5e1;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+/* 1. Scholar Outline Fallback */
+.avatar-scholar {
+  border-radius: 50%;
+  background-color: #f8fafc;
+}
+
+/* 2. Modern Card Rounded style */
+.avatar-modern {
+  border-radius: 12px;
+  background-color: #f5f3ff;
+}
+
+/* 3. Corporate Circular Boundary */
+.avatar-corporate {
+  border-radius: 50%;
+  background-color: #f1f5f9;
+}
+
+/* 4. Elegant Rectangular Portrait Frame */
+.avatar-elegant {
+  border-radius: 0px;
+  background-color: #fffaf8;
+}
+
+/* 5. Minimalist Underline Style */
+.avatar-minimal {
+  border-radius: 0px;
+  background: transparent !important;
+  border-width: 0 0 2px 0 !important;
+}
+
+/* 6. Creative Asymmetric Curve */
+.avatar-creative {
+  border-radius: 16px 4px 16px 4px;
+  background-color: #f0fdfa;
+}
+
+/* 7. Tech Rounded Square Frame */
+.avatar-tech {
+  border-radius: 8px;
+  background-color: #ecfdf5;
+}
+
+/* ==============================================
+   PRECISION PDF GENERATION AND MEDIA BREAKS
+   ============================================== */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 210mm !important;
+    height: 297mm !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Hide UI elements, overlays, labels and panels */
+  .app-header, 
+  .form-panel, 
+  .toast-container, 
+  .page-sheet-label,
+  .btn-control,
+  nav,
+  footer,
+  button {
+    display: none !important;
+  }
+
+  .builder-layout {
+    display: block !important;
+    grid-template-columns: none !important;
+    height: auto !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+
+  .preview-panel {
+    padding: 0 !important;
+    background: none !important;
+    overflow: visible !important;
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+
+  /* Force clean page bounds in printing engine */
+  .virtual-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 16mm 18mm !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    transform: none !important;
+    width: 210mm !important;
+    height: 297mm !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .virtual-sheet:last-child {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+}
