@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ResumeSpark Pro - Build Elegant ATS Resumes</title>
+
+    <!-- Google Fonts: Playfair Display (headings) + DM Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        /* Premium colour palette — deep navy + warm gold + soft cream */
+        --color-primary:       #1B2D4F;   /* deep navy */
+        --color-primary-light: #243C6B;   /* mid navy */
+        --color-accent:        #C9A84C;   /* warm gold */
+        --color-accent-light:  #E8C97A;   /* pale gold */
+        --color-surface:       #F7F4EE;   /* warm cream */
+        --color-surface-alt:   #EDE8DF;   /* slightly darker cream */
+        --color-text-base:     #1B2D4F;   /* navy as body text */
+        --color-text-muted:    #5A6A82;   /* steel-blue grey */
+        --color-white:         #FFFFFF;
+
+        /* Typography */
+        --font-display: 'Playfair Display', Georgia, serif;
+        --font-body:    'DM Sans', system-ui, sans-serif;
+      }
+
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html {
+        font-family: var(--font-body);
+        color: var(--color-text-base);
+        background-color: var(--color-surface);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-display);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
