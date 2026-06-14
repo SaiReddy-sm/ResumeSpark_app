@@ -1,4 +1,4 @@
-# 🚀 ResumeSpark - AI-Powered Resume Builder
+# 🚀 ResumeSpark -A Resume Builder App
 
 🔗 **Live Demo:** https://saireddy-sm.github.io/ResumeSpark_app/
 
