@@ -118,9 +118,7 @@ npm run build
 Add screenshots of:
 
 * Home Page
-* Resume Builder
-* Template Preview
-* Generated Resume
+
 
 ---
 
@@ -139,8 +137,8 @@ Add screenshots of:
 
 **Ch.Sai Chandra Sekhar Reddy**
 
-* GitHub: https://github.com/SaiReddy-sm
-* LinkedIn: [Add Your LinkedIn Profile](https://www.linkedin.com/in/sai-reddy-sai6134/)
+* [GitHub](https://github.com/SaiReddy-sm)
+* [LinkedIn](https://www.linkedin.com/in/sai-reddy-sai6134/)
 
 ---
 
